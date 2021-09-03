@@ -7,9 +7,9 @@ _Also looks better that the other shit out there._
 
 ## Dependencies (need to be installed if not already installed)
 
-1. `xdg-open` for Linux (UNIX-like systems), `open` for Mac and `start` for Windows
-2. `curl` (don't mind if windows)
-3. Zoom
+1. [`xdg-open`](https://linux.die.net/man/1/xdg-open) for Linux (UNIX-like systems), [`open`](https://scriptingosx.com/2017/02/the-macos-open-command/) for Mac and `start` for Windows
+2. [`curl`](https://curl.se/) (don't mind if windows)
+3. [Zoom](https://zoom.us/)
 
 ---
 
@@ -19,7 +19,7 @@ We need to get shell scripts working on you system first.
 Install [`Git Bash`](https://git-scm.com/downloads) (Comes along with Git) (Recommended).  
 For help on installing Git Bash, check [this article](https://www.makeuseof.com/install-git-git-bash-windows/) or [this youtube video](https://www.youtube.com/watch?v=BMW7LiF_Oc4)  
 _OR_  
-Install [`MSys2`](https://msys2.org) (Not recommended, heavier on resources).  
+Install [`MSys2`](https://msys2.org) (Not recommended, since it is harder to setup).  
   
 NOTE: To launch the Git Bash terminal, search for "Git Bash" using your windows search and open it from there.
 
