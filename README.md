@@ -2,6 +2,6 @@
 automatically joins zoom meetings without opening browser and shit on posix systems
 
 
--just download the `zoombie` and `zoom-meeting.txt` files into the same directory.
--fill in the `zoom-meeting.txt` file.
--run `sh zoombie`
+1. just download the `zoombie` and `zoom-meeting.txt` files into the same directory.
+2. fill in the `zoom-meeting.txt` file.
+3. run `sh zoombie`
