@@ -47,7 +47,7 @@ sh zoombie
 
 ## Editing the `zoom-meetings.txt` file
 FORMAT:
-> <time, 24 hours format, HH:MM> <link for the meeting> <topic (no numbers, no spaces) (optional)>   ---each field separated by SINGLE spaces
+> ### <time, 24 hours format, HH:MM> <link for the meeting> <topic (no numbers, no spaces) (optional)>   ---each field separated by SINGLE spaces
 Use separate lines for separate meetings. \ \
 EXAMPLE:
 ```
