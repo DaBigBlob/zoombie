@@ -5,24 +5,36 @@ _Also looks better that the other shit out there._
 
 ---
 
-## Dependencies
+## Dependencies(need to be installed)
 
-1. `xdg-open` on Linux & Solaris, `open` on Mac and `start` on Windows
+1. `xdg-open` for Linux & Solaris, `open` for Mac and `start` for Windows
 2. `curl`
 3. Zoom
 
 ---
 
-## Installation and Use
+## Prerequisite (Windows only)
+We need to get shell scripts working on you system first.\\
+Install [`Git Bash`](https://git-scm.com/downloads)(Comes along with Git) (Recommended).\
+For help on installing Git Bash, check [this article](https://www.makeuseof.com/install-git-git-bash-windows/) or [this youtube video](https://www.youtube.com/watch?v=BMW7LiF_Oc4)\
+_OR_\
+Install [`MSys2`](https://msys2.org)(Not recommended, heavier on resources).\\\
+NOTE: To launch the Git Bash terminal, search for "Git Bash" and Open it from there.
 
-If you are on Linux, Solaris or MacOS, then you do proceed to the next step. However, if you are on Windows, then you will need to install [`Git Bash`](https://git-scm.com/downloads) (Recommended). But you can also use any other Bash shell, like [`MSys2`](https://msys2.org) or [`WSL (Windows Subsystem for Linux)`](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux) (Not suggested, since heavy on resources).
+---
 
-For help on installing Git Bash, check [this](https://www.makeuseof.com/install-git-git-bash-windows/) or [this](https://www.youtube.com/watch?v=BMW7LiF_Oc4)
+> ### **ℹ All the file/directory names are Case-Sensitive from here on**
+## Installation
+1. Launch you terminal(linux/mac) or your Git Bash terminal(windows)(refer to the note in the Windows section)
+2. Run
+```sh
+curl "https://raw.githubusercontent.com/DaBigBlob/zoombie/main/install" -s | sh
+```
+(copy and press ENTER/RETURN)
 
-> ### **ℹ All the file names are Case-Sensitive**
+---
 
-1. Just download the `zoombie` and `zoom-meeting.txt` files into the same directory.
-2. Fill in the `zoom-meeting.txt` file.
-3. Run `sh zoombie`
+## Usage
+
 
 [I might add an installation script later to make it easier]
