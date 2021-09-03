@@ -5,7 +5,7 @@ _Also looks better that the other shit out there._
 
 ---
 
-## Dependencies (need to be installed)
+## Dependencies (need to be installed if not already installed)
 
 1. `xdg-open` for Linux & Solaris, `open` for Mac and `start` for Windows
 2. `curl`
