@@ -37,7 +37,7 @@ NOTE: To launch the Git Bash terminal, search for "Git Bash" using your windows 
 curl "https://raw.githubusercontent.com/DaBigBlob/zoombie/main/install" -s | sh
 ```
 
-(copy and press ENTER or RETURN)
+(copy, paste and press ENTER or RETURN)
 
 ---
 
