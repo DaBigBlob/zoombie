@@ -32,25 +32,22 @@ printf "%b" "\n"
 printf "%b" "${e}[*]${f}Starting autozoom...${no}\n"
 while true
 do
-	link=$(cat zoom-meetings.txt | grep $(date +%H:%M) | cut -d' ' -f 2)
-	if [ $link ]
+	if [ $(cat zoom-meetings.txt | grep $(date +%H:%M) | cut -d' ' -f 2) ]
 	then
-
-		        case "$OSTYPE" in
-		        		
-		        		        solaris*|linux*|bsd*) xdg-open "zoommtg://zoom.us/join?action=join&confno="$(echo $(echo $link | cut -d'/' -f 5) | cut -d'?' -f 1)"&pwd="$(echo $link | cut -d'=' -f 2);;
-		        		        darwin*)  open "zoommtg://zoom.us/join?action=join&confno="$(echo $(echo $link | cut -d'/' -f 5) | cut -d'?' -f 1)"&pwd="$(echo $link | cut -d'=' -f 2);;
-		        		        msys*|cygwin*)    start "zoommtg://zoom.us/join?action=join&confno="$(echo $(echo $link | cut -d'/' -f 5) | cut -d'?' -f 1)"&pwd="$(echo $link | cut -d'=' -f 2);;       		
-		        		        *)        echo "unknown: $OSTYPE" ;;
-		        		        esac
+		case "$OSTYPE" in
+			solaris*|linux*|bsd*) xdg-open "zoommtg://zoom.us/join?action=join&confno="$(echo $(echo $(cat zoom-meetings.txt | grep $(date +%H:%M) | cut -d' ' -f 2) | cut -d'/' -f 5) | cut -d'?' -f 1)"&pwd="$(echo $(cat zoom-meetings.txt | grep $(date +%H:%M) | cut -d' ' -f 2) | cut -d'=' -f 2);;
+		    darwin*) open "zoommtg://zoom.us/join?action=join&confno="$(echo $(echo $(cat zoom-meetings.txt | grep $(date +%H:%M) | cut -d' ' -f 2) | cut -d'/' -f 5) | cut -d'?' -f 1)"&pwd="$(echo $(cat zoom-meetings.txt | grep $(date +%H:%M) | cut -d' ' -f 2) | cut -d'=' -f 2);;
+		    msys*|cygwin*) start "zoommtg://zoom.us/join?action=join&confno="$(echo $(echo $(cat zoom-meetings.txt | grep $(date +%H:%M) | cut -d' ' -f 2) | cut -d'/' -f 5) | cut -d'?' -f 1)"&pwd="$(echo $(cat zoom-meetings.txt | grep $(date +%H:%M) | cut -d' ' -f 2) | cut -d'=' -f 2);;       		
+		    *) echo "unknown: $OSTYPE" ;;
+		esac
 		printf "%b" "${c}[${a}"$(date +%H:%M:%S)"${c}] ${d}Starting meeting...${no}\n"
 		printf "%b" "\n"
 		printf "%b" "\n"
 		printf "%b" "${e}###############################################################${no}\n"
 		printf "%b" "${f}SET TIME: ${g}"$(cat zoom-meetings.txt | grep $(date +%H:%M) | cut -d' ' -f 1)"${no}\n"
 		printf "%b" "${f}TOPIC: ${g}"$(cat zoom-meetings.txt | grep $(date +%H:%M) | cut -d' ' -f 3)"${no}\n"
-		printf "%b" "${f}MEETING ID: ${g}"$(echo $(echo $link | cut -d'/' -f 5) | cut -d'?' -f 1)"${no}\n"
-		printf "%b" "${f}LINK: ${g}"$link"${no}\n"
+		printf "%b" "${f}MEETING ID: ${g}"$(echo $(echo $(cat zoom-meetings.txt | grep $(date +%H:%M) | cut -d' ' -f 2) | cut -d'/' -f 5) | cut -d'?' -f 1)"${no}\n"
+		printf "%b" "${f}LINK: ${g}"$(cat zoom-meetings.txt | grep $(date +%H:%M) | cut -d' ' -f 2)"${no}\n"
 		printf "%b" "${e}###############################################################${no}\n"
 		printf "%b" "\n"
 		printf "%b" "\n"
