@@ -1,0 +1,4 @@
+#!/bin/sh
+curl "https://raw.githubusercontent.com/DaBigBlob/zoombie/main/zoombie" -s --output zoombie
+touch zoom-meetings.txt
+echo "Done."
