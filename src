@@ -33,7 +33,7 @@ do
 	if [ $(cat zoom-meetings.txt | grep $(date +%H:%M) | cut -d' ' -f 2) ]
 	then
 		case "$OSTYPE" in
-			solaris*|linux*|*bsd) xdg-open "zoommtg://zoom.us/join?action=join&confno="$(echo $(echo $(cat zoom-meetings.txt | grep $(date +%H:%M) | cut -d' ' -f 2) | cut -d'/' -f 5) | cut -d'?' -f 1)"&pwd="$(echo $(cat zoom-meetings.txt | grep $(date +%H:%M) | cut -d' ' -f 2) | cut -d'=' -f 2);;
+			solaris*|linux*|bsd*) xdg-open "zoommtg://zoom.us/join?action=join&confno="$(echo $(echo $(cat zoom-meetings.txt | grep $(date +%H:%M) | cut -d' ' -f 2) | cut -d'/' -f 5) | cut -d'?' -f 1)"&pwd="$(echo $(cat zoom-meetings.txt | grep $(date +%H:%M) | cut -d' ' -f 2) | cut -d'=' -f 2);;
 			darwin*) open "zoommtg://zoom.us/join?action=join&confno="$(echo $(echo $(cat zoom-meetings.txt | grep $(date +%H:%M) | cut -d' ' -f 2) | cut -d'/' -f 5) | cut -d'?' -f 1)"&pwd="$(echo $(cat zoom-meetings.txt | grep $(date +%H:%M) | cut -d' ' -f 2) | cut -d'=' -f 2);;
 			msys*|cygwin*) start "zoommtg://zoom.us/join?action=join&confno="$(echo $(echo $(cat zoom-meetings.txt | grep $(date +%H:%M) | cut -d' ' -f 2) | cut -d'/' -f 5) | cut -d'?' -f 1)"&pwd="$(echo $(cat zoom-meetings.txt | grep $(date +%H:%M) | cut -d' ' -f 2) | cut -d'=' -f 2);;       		
 			*) echo "unknown: $OSTYPE" ;;
