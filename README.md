@@ -5,7 +5,7 @@ _Also looks better that the other shit out there._
 
 ---
 
-## Dependencies(need to be installed)
+## Dependencies (need to be installed)
 
 1. `xdg-open` for Linux & Solaris, `open` for Mac and `start` for Windows
 2. `curl`
@@ -30,11 +30,17 @@ NOTE: To launch the Git Bash terminal, search for "Git Bash" and Open it from th
 ```sh
 curl "https://raw.githubusercontent.com/DaBigBlob/zoombie/main/install" -s | sh
 ```
-(copy and press ENTER/RETURN)
+(copy and press ENTER or RETURN)
 
 ---
 
 ## Usage
-
+1. Edit or add the required data to `zoom-meetings.txt` using your favourite text editor. (Details provided in the next section.)
+2. Launch you terminal(linux/mac) or your Git Bash terminal(windows)(refer to the note in the Windows section)
+3. Run
+```sh
+sh zoombie
+```
+(type and press ENTER or RETURN)
 
 [I might add an installation script later to make it easier]
