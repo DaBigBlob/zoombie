@@ -1,8 +1,8 @@
 #!/bin/sh
 
 #author: localboxcrox
-#V5
-#auto joins a series of zoom meetings one after anothe
+#V6
+#auto joins a series of zoom meetings one after another
 cat << "EOF"
 ▒███████▒ ▒█████   ▒█████   ███▄ ▄███▓ ▄▄▄▄    ██▓▓█████ 
 ▒ ▒ ▒ ▄▀░▒██▒  ██▒▒██▒  ██▒▓██▒▀█▀ ██▒▓█████▄ ▓██▒▓█   ▀ 
