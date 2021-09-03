@@ -1,5 +1,5 @@
 # zoombie        
-_automatically joins zoom meetings directly (without opening browser and shit on posix systems)_
+_automatically joins zoom meetings directly (without opening browser and shit on posix systems)_\
 _also looks better that the other shit out there_
 
 ## dependencies
