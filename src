@@ -1,0 +1,62 @@
+#!/bin/sh
+
+#author: localboxcrox
+#V5
+#auto joins a series of zoom meetings one after anothe
+cat << "EOF"
+▒███████▒ ▒█████   ▒█████   ███▄ ▄███▓ ▄▄▄▄    ██▓▓█████ 
+▒ ▒ ▒ ▄▀░▒██▒  ██▒▒██▒  ██▒▓██▒▀█▀ ██▒▓█████▄ ▓██▒▓█   ▀ 
+░ ▒ ▄▀▒░ ▒██░  ██▒▒██░  ██▒▓██    ▓██░▒██▒ ▄██▒██▒▒███   
+  ▄▀▒   ░▒██   ██░▒██   ██░▒██    ▒██ ▒██░█▀  ░██░▒▓█  ▄ 
+▒███████▒░ ████▓▒░░ ████▓▒░▒██▒   ░██▒░▓█  ▀█▓░██░░▒████▒
+░▒▒ ▓░▒░▒░ ▒░▒░▒░ ░ ▒░▒░▒░ ░ ▒░   ░  ░░▒▓███▀▒░▓  ░░ ▒V6░
+░░▒ ▒ ░ ▒  ░ ▒ ▒░   ░ ▒ ▒░ ░  ░      ░▒░▒   ░  ▒ ░ ░ ░  ░
+░ ░ ░ ░ ░░ ░ ░ ▒  ░ ░ ░ ▒  ░      ░    ░    ░  ▒ ░   ░   
+  ░ ░        ░ ░      ░ ░         ░    ░       ░     ░  ░
+░                                           ░          
+EOF
+no='\e[0m'
+a='\e[38;5;69m'
+b='\e[38;5;49m'
+c='\e[38;5;207m'
+d='\e[38;5;227m'
+e='\e[38;5;198m'
+f='\e[38;5;83m'
+g='\e[38;5;218m'
+printf "%b" "${a}                                       written by DaBigBlob @github${no}\n"
+printf "%b" "\n"
+printf "%b" "${e}[*]${f}Reading the zoom-meeting.txt file...${no}\n"
+cat zoom-meetings.txt
+printf "%b" "${e}[#]${f}Done.${no}\n"
+printf "%b" "\n"
+printf "%b" "${e}[*]${f}Starting autozoom...${no}\n"
+while true
+do
+	link=$(cat zoom-meetings.txt | grep $(date +%H:%M) | cut -d' ' -f 2)
+	if [ $link ]
+	then
+
+		        case "$OSTYPE" in
+		        		
+		        		        solaris*|linux*|bsd*) xdg-open "zoommtg://zoom.us/join?action=join&confno="$(echo $(echo $link | cut -d'/' -f 5) | cut -d'?' -f 1)"&pwd="$(echo $link | cut -d'=' -f 2);;
+		        		        darwin*)  open "zoommtg://zoom.us/join?action=join&confno="$(echo $(echo $link | cut -d'/' -f 5) | cut -d'?' -f 1)"&pwd="$(echo $link | cut -d'=' -f 2);;
+		        		        msys*|cygwin*)    start "zoommtg://zoom.us/join?action=join&confno="$(echo $(echo $link | cut -d'/' -f 5) | cut -d'?' -f 1)"&pwd="$(echo $link | cut -d'=' -f 2);;       		
+		        		        *)        echo "unknown: $OSTYPE" ;;
+		        		        esac
+		printf "%b" "${c}[${a}"$(date +%H:%M:%S)"${c}] ${d}Starting meeting...${no}\n"
+		printf "%b" "\n"
+		printf "%b" "\n"
+		printf "%b" "${e}###############################################################${no}\n"
+		printf "%b" "${f}SET TIME: ${g}"$(cat zoom-meetings.txt | grep $(date +%H:%M) | cut -d' ' -f 1)"${no}\n"
+		printf "%b" "${f}TOPIC: ${g}"$(cat zoom-meetings.txt | grep $(date +%H:%M) | cut -d' ' -f 3)"${no}\n"
+		printf "%b" "${f}MEETING ID: ${g}"$(echo $(echo $link | cut -d'/' -f 5) | cut -d'?' -f 1)"${no}\n"
+		printf "%b" "${f}LINK: ${g}"$link"${no}\n"
+		printf "%b" "${e}###############################################################${no}\n"
+		printf "%b" "\n"
+		printf "%b" "\n"
+		printf "%b" "${c}[${a}"$(date +%H:%M:%S)"${c}] ${d}Job done for now.${no}\n"
+	else
+		printf "%b" "${c}[${a}"$(date +%H:%M:%S)"${c}] ${b}No meeting to start right now.${no}\n"
+	fi
+	sleep 60
+done
