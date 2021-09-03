@@ -23,7 +23,7 @@ f='\e[38;5;83m'
 g='\e[38;5;218m'
 printf "%b" "${a}                                       written by DaBigBlob @github${no}\n"
 printf "%b" "\n"
-printf "%b" "${e}[*]${f}Reading the zoom-meeting.txt file...${no}\n"
+printf "%b" "${e}[*]${f}Reading the zoom-meetings.txt file...${no}\n"
 cat zoom-meetings.txt
 printf "%b" "${e}[#]${f}Done.${no}\n"
 printf "%b" "\n"
