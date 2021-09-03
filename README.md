@@ -1,6 +1,6 @@
 # zoombie        
-automatically joins zoom meetings directly (without opening browser and shit on posix systems)
-also looks better that the other shit out there
+> automatically joins zoom meetings directly (without opening browser and shit on posix systems)
+> also looks better that the other shit out there
 
 ## dependencies
 1. xdg-open
