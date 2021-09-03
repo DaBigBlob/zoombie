@@ -1,6 +1,6 @@
 # ![Zoombie Ascii Logo](https://media.discordapp.net/attachments/840857306040500225/883298728155443230/carbon.png?width=844&height=490)
 
-_Automatically joins zoom meetings directly (without opening browser and shit) on windows, linux and mac_  
+_Automatically joins zoom meetings directly (without opening browser and shit) on windows, linux(or solaris, or BSD) and mac_  
 _Also looks better that the other shit out there_
 
 ---
