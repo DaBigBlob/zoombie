@@ -1,8 +1,8 @@
  #!/bin/sh
 
 #author: localboxcrox
-#V6
-#auto joins a series of zoom meetings one after another
+#V5
+#auto joins a series of zoom meetings one after anothe
 cat << "EOF"
 ▒███████▒ ▒█████   ▒█████   ███▄ ▄███▓ ▄▄▄▄    ██▓▓█████ 
 ▒ ▒ ▒ ▄▀░▒██▒  ██▒▒██▒  ██▒▓██▒▀█▀ ██▒▓█████▄ ▓██▒▓█   ▀ 
@@ -35,17 +35,14 @@ do
 	link=$(cat zoom-meetings.txt | grep $(date +%H:%M) | cut -d' ' -f 2)
 	if [ $link ]
 	then
-		case "$OSTYPE" in
 
-		darwin*)  open "zoommtg://zoom.us/join?action=join&confno="$(echo $(echo $link | cut -d'/' -f 5) | cut -d'?' -f 1)"&pwd="$(echo $link | cut -d'=' -f 2);; 
-
-		msys*)    start "zoommtg://zoom.us/join?action=join&confno="$(echo $(echo $link | cut -d'/' -f 5) | cut -d'?' -f 1)"&pwd="$(echo $link | cut -d'=' -f 2);;
-
-		cygwin*)  start "zoommtg://zoom.us/join?action=join&confno="$(echo $(echo $link | cut -d'/' -f 5) | cut -d'?' -f 1)"&pwd="$(echo $link | cut -d'=' -f 2);;
-
-		*)   xdg-open "zoommtg://zoom.us/join?action=join&confno="$(echo $(echo $link | cut -d'/' -f 5) | cut -d'?' -f 1)"&pwd="$(echo $link | cut -d'=' -f 2);;
-		esac
-
+		        case "$OSTYPE" in
+		        		
+		        		        solaris*|linux*|bsd*) xdg-open "zoommtg://zoom.us/join?action=join&confno="$(echo $(echo $link | cut -d'/' -f 5) | cut -d'?' -f 1)"&pwd="$(echo $link | cut -d'=' -f 2);;
+		        		        darwin*)  open "zoommtg://zoom.us/join?action=join&confno="$(echo $(echo $link | cut -d'/' -f 5) | cut -d'?' -f 1)"&pwd="$(echo $link | cut -d'=' -f 2);;
+		        		        msys*|cygwin*)    start "zoommtg://zoom.us/join?action=join&confno="$(echo $(echo $link | cut -d'/' -f 5) | cut -d'?' -f 1)"&pwd="$(echo $link | cut -d'=' -f 2);;       		
+		        		        *)        echo "unknown: $OSTYPE" ;;
+		        		        esac
 		printf "%b" "${c}[${a}"$(date +%H:%M:%S)"${c}] ${d}Starting meeting...${no}\n"
 		printf "%b" "\n"
 		printf "%b" "\n"
