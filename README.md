@@ -14,12 +14,12 @@ _Also looks better that the other shit out there._
 ---
 
 ## Prerequisite (Windows only)
-We need to get shell scripts working on you system first. \ \
+We need to get shell scripts working on you system first. \ 
 Install [`Git Bash`](https://git-scm.com/downloads) (Comes along with Git) (Recommended). \
 For help on installing Git Bash, check [this article](https://www.makeuseof.com/install-git-git-bash-windows/) or [this youtube video](https://www.youtube.com/watch?v=BMW7LiF_Oc4)\
 _OR_\
-Install [`MSys2`](https://msys2.org) (Not recommended, heavier on resources). \ \ \
-NOTE: To launch the Git Bash terminal, search for "Git Bash" and Open it from there.
+Install [`MSys2`](https://msys2.org) (Not recommended, heavier on resources). \
+NOTE: To launch the Git Bash terminal, search for "Git Bash" using your windows search and Open it from there.
 
 ---
 
