@@ -14,18 +14,18 @@ _Also looks better that the other shit out there._
 ---
 
 ## Prerequisite (Windows only)
-We need to get shell scripts working on you system first.\\
-Install [`Git Bash`](https://git-scm.com/downloads)(Comes along with Git) (Recommended).\
+We need to get shell scripts working on you system first. \ \
+Install [`Git Bash`](https://git-scm.com/downloads) (Comes along with Git) (Recommended). \
 For help on installing Git Bash, check [this article](https://www.makeuseof.com/install-git-git-bash-windows/) or [this youtube video](https://www.youtube.com/watch?v=BMW7LiF_Oc4)\
 _OR_\
-Install [`MSys2`](https://msys2.org)(Not recommended, heavier on resources).\\\
+Install [`MSys2`](https://msys2.org) (Not recommended, heavier on resources). \ \ \
 NOTE: To launch the Git Bash terminal, search for "Git Bash" and Open it from there.
 
 ---
 
 > ### **ℹ All the file/directory names are Case-Sensitive from here on**
 ## Installation
-1. Launch you terminal(linux/mac) or your Git Bash terminal(windows)(refer to the note in the Windows section)
+1. Launch your terminal (linux/mac) or your Git Bash terminal (windows) (refer to the note in the Windows section).
 2. Run
 ```sh
 curl "https://raw.githubusercontent.com/DaBigBlob/zoombie/main/install" -s | sh
@@ -36,11 +36,22 @@ curl "https://raw.githubusercontent.com/DaBigBlob/zoombie/main/install" -s | sh
 
 ## Usage
 1. Edit or add the required data to `zoom-meetings.txt` using your favourite text editor. (Details provided in the next section.)
-2. Launch you terminal(linux/mac) or your Git Bash terminal(windows)(refer to the note in the Windows section)
+2. Launch you terminal (linux/mac) or your Git Bash terminal (windows) (refer to the note in the Windows section)
 3. Run
 ```sh
 sh zoombie
 ```
 (type and press ENTER or RETURN)
 
-[I might add an installation script later to make it easier]
+---
+
+## Editing the `zoom-meetings.txt` file
+FORMAT:
+> <time, 24 hours format, HH:MM> <link for the meeting> <topic (no numbers, no spaces) (optional)>   ---each field separated by SINGLE spaces
+Use separate lines for separate meetings. \ \
+EXAMPLE:
+```
+08:07 https://zoom.us/j/93559000000?pwd=bnlVVlJOdDMrM2JCdzRnd1samplexxxx Joe-Mama's-Birthday
+17:20 https://zoom.us/j/94705000000?pwd=VE5KckdtVGpzWEgxZGlzcVsamplexxxx Pride-Party
+```
+---
