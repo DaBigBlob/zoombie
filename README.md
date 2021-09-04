@@ -37,7 +37,7 @@ NOTE: To launch the Git Bash terminal, search for "Git Bash" using your windows 
 curl "https://raw.githubusercontent.com/DaBigBlob/zoombie/main/install" -s | sh
 ```
 
-(copy, paste and press ENTER or RETURN)
+(copy, paste and press ENTER or RETURN) \
 3. The above command will also tell you where your `zoommeetings.txt` is stored. REMEMBER IT bacause you'll need to assess it frequently. uwu
 ---
 
