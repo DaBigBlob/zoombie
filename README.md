@@ -85,7 +85,7 @@ _**Use separate lines for separate meetings.**_
 ---
 
 ## How to exit (note4noobs)
-Generic keyboards: `CTRL`+`c`
+Generic keyboards: `CTRL`+`c` \
 Apple keyboards: `⌘`+`c`
 
 ---
