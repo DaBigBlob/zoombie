@@ -82,6 +82,9 @@ _**Use separate lines for separate meetings.**_
 ---
 
 ## Precaution
+
+`zoombie` wont work offline. \
+and 
 ### ***DO NOT RUN MORE THAN 1 INSTANCE OF `zoombie` AT A TIME***  
 
 ---
@@ -89,5 +92,11 @@ _**Use separate lines for separate meetings.**_
 ## How to exit `zoombie` (note4noobs)
 Generic keyboards: `CTRL`+`c` \
 Apple keyboards: `⌘`+`c`
+
+---
+
+## How to upgrade `zoombie` to latest version
+You don't have to. \
+Everytime you run `zoombie`, it automatically fetches the latest version.
 
 ---
