@@ -27,7 +27,7 @@ printf "%b" "${e}[*]${f}Reading the zoom-meetings.txt file...${no}\n"
 cat zoom-meetings.txt
 printf "%b" "${e}[#]${f}Done.${no}\n"
 printf "%b" "\n"
-printf "%b" "${e}[*]${f}Starting autozoom...${no}\n"
+printf "%b" "${e}[*]${f}Starting...${no}\n"
 while true
 do
 	if [ $(cat zoom-meetings.txt | grep $(date +%H:%M) | cut -d' ' -f 2) ]
