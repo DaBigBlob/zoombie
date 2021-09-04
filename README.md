@@ -38,7 +38,7 @@ curl "https://raw.githubusercontent.com/DaBigBlob/zoombie/main/install" -s | sh
 ```
 
 (copy, paste and press ENTER or RETURN)
-
+3. The above command will also tell you where your `zoommeetings.txt` is stored. REMEMBER IT bacause you'll need to assess it frequently. uwu
 ---
 
 ## Usage
@@ -58,7 +58,8 @@ sh zoombie
 ---
 
 ## Editing the `zoom-meetings.txt` file
-
+1. Navigate to the directory (folder) mentioned in the step `3` of the installation section.
+2. Open the `zoom-meetings.txt` file and edit with your favourite text editor. (Notepad works too -\_-)
 ### ***Format***  
 
 ```txt
@@ -75,5 +76,16 @@ _**Use separate lines for separate meetings.**_
 08:07 https://zoom.us/j/93559000000?pwd=bnlVVlJOdDMrM2JCdzRnd1samplexxxx Joe-Mama's-Birthday
 17:20 https://zoom.us/j/94705000000?pwd=VE5KckdtVGpzWEgxZGlzcVsamplexxxx Pride-Party
 ```
+
+---
+
+## Precaution
+### ***DO NOT RUN MORE THAN 1 INSTANCE OF `zoombie` AT A TIME***  
+
+---
+
+## How to exit (note4noobs)
+Generic keyboards: `CTRL`+`c`
+Apple keyboards: `⌘`+`c`
 
 ---
