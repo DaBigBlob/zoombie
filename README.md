@@ -38,7 +38,9 @@ curl "https://raw.githubusercontent.com/DaBigBlob/zoombie/main/install" -s | sh
 ```
 
 (copy, paste and press ENTER or RETURN) \
+\
 3. The above command will also tell you where your `zoommeetings.txt` is stored. REMEMBER IT bacause you'll need to assess it frequently. uwu
+
 ---
 
 ## Usage
