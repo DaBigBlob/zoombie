@@ -100,3 +100,4 @@ You don't have to. \
 Everytime you run `zoombie`, it automatically fetches the latest version.
 
 ---
+***A special thanks to contributor SpiderMath for adding the Windows support.***
