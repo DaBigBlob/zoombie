@@ -4,4 +4,4 @@ touch zoom-meetings.txt
 echo "Success."
 echo ""
 echo "NOTE: zoombie and your zoom-meetings.txt file are in: "$PWD
-echo "for God's sake remember this location"
+echo "------for God's sake remember this location"
