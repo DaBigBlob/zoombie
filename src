@@ -1,5 +1,5 @@
 #!/bin/sh
-#author: DaBigBlob
+#author: DaBigBlob 
 no='\e[0m'
 bld='\e[1m'
 und='\e[4m'
