@@ -7,7 +7,7 @@ _Also looks better that the other shit out there._
 
 ## Screenshot(s)
 
-# ![Zoombie Screenshot1](https://raw.githubusercontent.com/DaBigBlob/zoombie/main/zoombie.png)
+# ![Zoombie Screenshot1](https://cdn.discordapp.com/attachments/900714987893456936/903350808005988412/zoombie.png)
 
 ---
 
