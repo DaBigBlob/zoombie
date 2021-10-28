@@ -5,6 +5,12 @@ _Also looks better that the other shit out there._
 
 ---
 
+## Screenshot(s)
+
+# ![Zoombie Screenshot1](# ![Zoombie Ascii Logo](https://user-images.githubusercontent.com/73036332/132017908-f3706ef6-e325-49d9-9f80-06df4ebfa523.png)
+
+---
+
 ## Dependencies (need to be installed if not already installed)
 
 1. [`xdg-open`](https://linux.die.net/man/1/xdg-open) for Linux (UNIX-like systems), [`open`](https://scriptingosx.com/2017/02/the-macos-open-command/) for Mac and `start` for Windows
