@@ -7,7 +7,7 @@ _Also looks better that the other shit out there._
 
 ## Screenshot(s)
 
-# ![Zoombie Screenshot1](# ![Zoombie Ascii Logo](https://user-images.githubusercontent.com/73036332/132017908-f3706ef6-e325-49d9-9f80-06df4ebfa523.png)
+# ![Zoombie Screenshot1](https://raw.githubusercontent.com/DaBigBlob/zoombie/main/zoombie.png)
 
 ---
 
