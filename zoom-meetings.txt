@@ -1,6 +1,0 @@
-TIME{24hrs format, H:M}[required]  LINK[required]  TOPIC{no space, no numbers}[optional] --[all separated by SINGLE spaces]
-+++++++++++++++++++++++++++++++++  ++++++++++++++  +++++++++++++++++++++++++++++++++++++
-HH:MM https://zoom.us/j/93559000000?pwd=bnlVVlJOdDMrM2JCdzRnd1samplexxxx 1st-example
-HH:MM https://zoom.us/j/94705000000?pwd=VE5KckdtVGpzWEgxZGlzcVsamplexxxx 2nd-example
-
-
