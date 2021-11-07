@@ -46,7 +46,7 @@ printf "%b" "\n${e}[*]${f}Reading the zoom-meetings.txt file...${no}\n"
 cat zoom-meetings.txt
 printf "%b" "${e}[#]${f}Done.${no}\n\n"
 #print the starting time
-printf "%b" "${e}[*]${f}Starting at ${a}"$(date +%I:%M%p)" "$(date +%S)" seconds${f}...${no}\n\n"
+printf "%b" "${e}[*]${f}Starting at ${a}"$(date +%I:%M%p)" and "$(date +%S)" sec${f}...${no}\n\n"
 #start an indefinite loo
 while [ 1 ]
 do
