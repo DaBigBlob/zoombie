@@ -71,7 +71,7 @@ sh zoombie
 ### ***Format***  
 
 ```txt
- <time in 24 hours of format HH:MM> <link for the zoom meeting> <topic without any numbers or spaces, this parameter is optional>
+ <time in 12 hours of format HH:MM(AM/PM)> <link for the zoom meeting> <topic within double quotes (""), this parameter is optional>
 ```
 
 > Each field is to be separated by **1 space** in between them.
@@ -81,8 +81,8 @@ _**Use separate lines for separate meetings.**_
 ### ***Sample***  
 
 ```txt
-08:07 https://zoom.us/j/93559000000?pwd=bnlVVlJOdDMrM2JCdzRnd1samplexxxx Joe-Mama's-Birthday
-17:20 https://zoom.us/j/94705000000?pwd=VE5KckdtVGpzWEgxZGlzcVsamplexxxx Pride-Party
+08:07AM https://zoom.us/j/93559000000?pwd=bnlVVlJOdDMrM2JCdzRnd1samplexxxx "Joe-Mama's Birthday. But prolly not gonna join."
+10:20PM https://zoom.us/j/94705000000?pwd=VE5KckdtVGpzWEgxZGlzcVsamplexxxx "Pride Party! Woo Hoo!"
 ```
 
 ---
