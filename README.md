@@ -14,8 +14,8 @@ _Also looks better that the other shit out there._
 ## Dependencies (need to be installed if not already installed)
 
 1. [`xdg-open`](https://linux.die.net/man/1/xdg-open) for Linux (UNIX-like systems), [`open`](https://scriptingosx.com/2017/02/the-macos-open-command/) for Mac and `start` for Windows
-2. [`curl`](https://curl.se/)
-3. [Zoom](https://zoom.us/)
+2. [`curl`](https://curl.se/download.html)
+3. [zoom client](https://zoom.us/support/download)
 
 ---
 
