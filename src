@@ -67,8 +67,7 @@ do
 			solaris*|*linux*|*BSD*) xdg-open "zoommtg://"$dom"/join?action=join&confno="$mtnid"&pwd="$pwdhsh;;
 			darwin*) open "zoommtg://"$dom"/join?action=join&confno="$mtnid"&pwd="$pwdhsh;;
 			msys*|cygwin*) start "zoommtg://"$dom"/join?action=join&confno="$mtnid"&pwd="$pwdhsh;;       		
-			*) 	printf "%b" "\n\n${e}UNKNOWN OS DETECTED: The following attempt to start a meeting might fail.${no}" ;
-				xdg-open "zoommtg://"$dom"/join?action=join&confno="$mtnid"&pwd="$pwdhsh;;
+			*) xdg-open "zoommtg://"$dom"/join?action=join&confno="$mtnid"&pwd="$pwdhsh;;
 		esac
 		#declared separately coz why not
 		topic=$(cat zoom-meetings.txt | grep $dt | cut -d'"' -f 2)
