@@ -106,4 +106,4 @@ You don't have to. \
 Everytime you run `zoombie`, it automatically fetches the latest version.
 
 ---
-***Special thanks to contributor SpiderMath for adding Windows support.***
+***Special thanks to contributor SpiderMath for adding Windows support to the shell script.***
