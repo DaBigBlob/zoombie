@@ -1,9 +1,9 @@
 #!/bin/sh
-version='10'
+version='11'
 #the following is the message of the day (MOTD). I feel the majority users will be students who require something fun/weird to begin a stressfull day.
 #is plain text; is generated based on your NAME and OS. It uses the FORTUNE and COWSAY packages and a custom script that run on my server (IPv$ 46.4.114.111) so that you dont have to install them.
 #checks if the http request is from zoombie from the "ZoombieV"$version" part; i know its a bad implementation but im lazy TwT
-motd=$(curl -A "ZoombieV"$version", "$OSTYPE", "$USER"" -s 46.4.114.111:6999/motd)
+motd=$(curl -A "ZoombieV"$version", "$(uname)", "$USER"" -s 46.4.114.111:6999/motd)
 #the following are the escape characters for colors
 no='\e[0m'
 bld='\e[1m'
