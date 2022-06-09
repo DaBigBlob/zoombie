@@ -1,6 +1,7 @@
 #!/bin/sh
 curl "https://raw.githubusercontent.com/DaBigBlob/zoombie/main/zoombie" -s --output zoombie
 touch zoom-meetings.txt
+chmod +x zoombie
 echo "Success."
 echo ""
 echo "NOTE: zoombie and your zoom-meetings.txt file are in: "$PWD
