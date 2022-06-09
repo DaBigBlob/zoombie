@@ -63,12 +63,36 @@ do
 		#zoom domain
 		dom=$(echo $lnk | cut -d'/' -f 3)
 		#different implementation for different OS type
-		case "$OSTYPE" in
-			solaris*|*linux*|*BSD*) xdg-open "zoommtg://"$dom"/join?action=join&confno="$mtnid"&pwd="$pwdhsh;;
-			darwin*) open "zoommtg://"$dom"/join?action=join&confno="$mtnid"&pwd="$pwdhsh;;
-			msys*|cygwin*) start "zoommtg://"$dom"/join?action=join&confno="$mtnid"&pwd="$pwdhsh;;       		
-			*) xdg-open "zoommtg://"$dom"/join?action=join&confno="$mtnid"&pwd="$pwdhsh;;
-		esac
+		case "$(uname)" in
+			Linux*|*BSD*)
+                xdg-open "zoommtg://"$dom"/join?action=join&confno="$mtnid"&pwd="$pwdhsh
+                ;;
+			Darwin*)
+                open "zoommtg://"$dom"/join?action=join&confno="$mtnid"&pwd="$pwdhsh
+                ;;
+			msys*|cygwin*)
+                start "zoommtg://"$dom"/join?action=join&confno="$mtnid"&pwd="$pwdhsh
+                ;;       		
+			*)
+                printf "%b" "
+——--—-——No OS support?——--————
+⠀⣞⢽⢪⢣⢣⢣⢫⡺⡵⣝⡮⣗⢷⢽⢽⢽⣮⡷⡽⣜⣜⢮⢺⣜⢷⢽⢝⡽⣝
+⠸⡸⠜⠕⠕⠁⢁⢇⢏⢽⢺⣪⡳⡝⣎⣏⢯⢞⡿⣟⣷⣳⢯⡷⣽⢽⢯⣳⣫⠇
+⠀⠀⢀⢀⢄⢬⢪⡪⡎⣆⡈⠚⠜⠕⠇⠗⠝⢕⢯⢫⣞⣯⣿⣻⡽⣏⢗⣗⠏⠀
+⠀⠪⡪⡪⣪⢪⢺⢸⢢⢓⢆⢤⢀⠀⠀⠀⠀⠈⢊⢞⡾⣿⡯⣏⢮⠷⠁⠀⠀
+⠀⠀⠀⠈⠊⠆⡃⠕⢕⢇⢇⢇⢇⢇⢏⢎⢎⢆⢄⠀⢑⣽⣿⢝⠲⠉⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⡿⠂⠠⠀⡇⢇⠕⢈⣀⠀⠁⠡⠣⡣⡫⣂⣿⠯⢪⠰⠂⠀⠀⠀⠀
+⠀⠀⠀⠀⡦⡙⡂⢀⢤⢣⠣⡈⣾⡃⠠⠄⠀⡄⢱⣌⣶⢏⢊⠂⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢝⡲⣜⡮⡏⢎⢌⢂⠙⠢⠐⢀⢘⢵⣽⣿⡿⠁⠁⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠨⣺⡺⡕⡕⡱⡑⡆⡕⡅⡕⡜⡼⢽⡻⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣼⣳⣫⣾⣵⣗⡵⡱⡡⢣⢑⢕⢜⢕⡝⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⣴⣿⣾⣿⣿⣿⡿⡽⡑⢌⠪⡢⡣⣣⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⡟⡾⣿⢿⢿⢵⣽⣾⣼⣘⢸⢸⣞⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠁⠇⠡⠩⡫⢿⣝⡻⡮⣒⢽⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+—————————————————————————————"
+                exit 0
+                ;;
+        esac
 		#declared separately coz why not
 		topic=$(cat zoom-meetings.txt | grep $dt | cut -d'"' -f 2)
 		#what to print when starting a meeting
