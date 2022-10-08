@@ -1,7 +1,7 @@
 #!/bin/sh
-curl "https://raw.githubusercontent.com/DaBigBlob/zoombie/main/zoombie" -s --output "$HOME/.zoombie/bin/zoombie"
+mkdir -p "$HOME/.zoombie/bin/zoombie"
+git clone "https://github.com/DaBigBlob/zoombie.git" "$HOME/.zoombie/bin/zoombie"
 touch "$HOME/zoom-meetings.txt"
-chmod +x "$HOME/.zoombie/bin/zoombie"
 
 export PATH="$PATH:$HOME/.zoombie/bin"
 printf "#added my zoombie installer\n$PATH:%s\n" "$HOME/.zoombie/bin" >> "$HOME/.profile"
