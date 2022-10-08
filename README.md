@@ -45,7 +45,7 @@ curl "https://raw.githubusercontent.com/DaBigBlob/zoombie/main/install" -s | sh
 
 (copy, paste and press ENTER or RETURN) \
 \
-3. The above command will also tell you where your `zoom-meetings.txt` is stored. REMEMBER IT because you'll need to assess it frequently. uwu
+3. Your `zoom-meetings.txt` will be placed in your home directory (folder) by the Installer. Done.
 
 ---
 
@@ -58,7 +58,7 @@ curl "https://raw.githubusercontent.com/DaBigBlob/zoombie/main/install" -s | sh
 3. Run
 
 ```sh
-sh zoombie
+zoombie
 ```
 
 (type and press ENTER or RETURN)
@@ -66,7 +66,7 @@ sh zoombie
 ---
 
 ## Editing the `zoom-meetings.txt` file
-1. Navigate to the directory (folder) mentioned in the step `3` of the installation section.
+1. Navigate to your home directory (folder).
 2. Open the `zoom-meetings.txt` file and edit with your favourite text editor. (Notepad works too -\_-)
 ### ***Format***  
 

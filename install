@@ -1,8 +1,10 @@
 #!/bin/sh
-curl "https://raw.githubusercontent.com/DaBigBlob/zoombie/main/zoombie" -s --output zoombie
-touch zoom-meetings.txt
-chmod +x zoombie
-echo "Success."
-echo ""
-echo "NOTE: zoombie and your zoom-meetings.txt file are in: "$PWD
-echo "------for God's sake remember this location"
+curl "https://raw.githubusercontent.com/DaBigBlob/zoombie/main/zoombie" -s --output "$HOME/.zoombie/bin/zoombie"
+touch "$HOME/zoom-meetings.txt"
+chmod +x "$HOME/.zoombie/bin/zoombie"
+
+export PATH="$PATH:$HOME/.zoombie/bin"
+printf "#added my zoombie installer\n$PATH:%s\n" "$HOME/.zoombie/bin" >> "$HOME/.profile"
+
+printf "Installed.\n"
+

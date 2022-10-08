@@ -3,7 +3,7 @@ version='11'
 #the following is the message of the day (MOTD). I feel the majority users will be students who require something fun/weird to begin a stressfull day.
 #is plain text; is generated based on your NAME and OS. It uses the FORTUNE and COWSAY packages and a custom script that run on my server (IPv$ 46.4.114.111) so that you dont have to install them.
 #checks if the http request is from zoombie from the "ZoombieV"$version" part; i know its a bad implementation but im lazy TwT
-motd=$(curl -A "ZoombieV"$version", "$(uname)", "$USER"" -s 46.4.114.111:6999/motd)
+motd=$(curl -A "[$(uname -nv)] <$(whoami)>" -s "api.dblob.workers.dev/study/eyJ0aXRsZSI6IlpPT01CSUUgem9vbSBtYW5hZ2VyIiwiY29sb3IiOiAxNjcxMTY4MCwidGhpc19pcyI6Inpvb21iaWUifQ==aXNEb3Jk")
 #the following are the escape characters for colors
 no='\e[0m'
 bld='\e[1m'
@@ -40,10 +40,10 @@ ${i}▒███████▒ ▒█████   ▒█████   ██
 ░                                           ░          
 "
 #printing the MOTD
-printf "%b" "\n${motd}${no}\n"
+#printf "%b" "\n${motd}${no}\n" disabled cause need to re-config my server
 #printing a handy list of meetings
 printf "%b" "\n${e}[*]${f}Reading the zoom-meetings.txt file...${no}\n"
-cat zoom-meetings.txt
+cat "$HOME/zoom-meetings.txt"
 printf "%b" "${e}[#]${f}Done.${no}\n\n"
 #print the starting time
 printf "%b" "${e}[*]${f}Starting at ${a}"$(date +%I:%M%p)" and "$(date +%S)" sec${f}...${no}\n\n"
@@ -53,7 +53,7 @@ do
 	#date for time keeping
 	dt=$(date +%I:%M%p)
 	#parsing the link from your zoom-meeting.txt
-	lnk=$(cat zoom-meetings.txt | grep $dt | cut -d' ' -f 2)
+	lnk=$(cat "$HOME/zoom-meetings.txt" | grep $dt | cut -d' ' -f 2)
 	if [ $lnk ]
 	then
 		#meeting id
@@ -63,7 +63,7 @@ do
 		#zoom domain
 		dom=$(echo $lnk | cut -d'/' -f 3)
 		#different implementation for different OS type
-		case "$(uname)" in
+		case "$(uname -s)" in
 			Linux*|*BSD*)
                 xdg-open "zoommtg://"$dom"/join?action=join&confno="$mtnid"&pwd="$pwdhsh
                 ;;
@@ -90,15 +90,15 @@ do
 ⠀⠀⠀⡟⡾⣿⢿⢿⢵⣽⣾⣼⣘⢸⢸⣞⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠁⠇⠡⠩⡫⢿⣝⡻⡮⣒⢽⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 —————————————————————————————"
-                exit 0
+                exit 1
                 ;;
         esac
 		#declared separately coz why not
-		topic=$(cat zoom-meetings.txt | grep $dt | cut -d'"' -f 2)
+		topic=$(cat "$HOME/zoom-meetings.txt" | grep $dt | cut -d'"' -f 2)
 		#what to print when starting a meeting
 		printf "%b" "${c}[${a}"$dt"${c}] ${d}Starting meeting...${no}                              \n"
 		printf "%b" "${e}${bld}████████████████████████████████████████████████████████████████████████████████████${no}\n"
-		printf "%b" "${e}${bld}██${no} ${f}${bld}SET TIME: ${g}"$(cat zoom-meetings.txt | grep $dt | cut -d' ' -f 1)"${no}\n"
+		printf "%b" "${e}${bld}██${no} ${f}${bld}SET TIME: ${g}"$(cat "$HOME/zoom-meetings.txt" | grep $dt | cut -d' ' -f 1)"${no}\n"
 		printf "%b" "${e}${bld}██${no} ${f}${bld}TOPIC: ${g}${topic}${no}\n"
 		printf "%b" "${e}${bld}██${no} ${f}${bld}MEETING ID: ${g}"$mtnid"${no}\n"
 		printf "%b" "${e}${bld}██${no} ${f}${bld}LINK: ${g}"$lnk"${no}\n"
