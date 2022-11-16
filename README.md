@@ -1,6 +1,6 @@
 # ![Zoombie Ascii Logo](https://user-images.githubusercontent.com/73036332/132017908-f3706ef6-e325-49d9-9f80-06df4ebfa523.png)
 
-_Automatically joins zoom meetings directly (without opening browser and shit) on windows, linux(or solaris, or BSD) and mac._  
+_Automatically joins zoom meetings directly (without opening browser and stuff) on windows, linux(or solaris, or BSD) and mac._  
 _Also looks better that the other shit out there._
 
 ---
